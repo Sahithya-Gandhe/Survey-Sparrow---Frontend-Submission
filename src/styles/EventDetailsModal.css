@@ -1,0 +1,80 @@
+.details-modal {
+  background-color: #ffffff;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+.details-content {
+  padding: 32px 28px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.event-heading {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.color-indicator {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+}
+
+.detail-symbol {
+  font-size: 22px;
+  width: 32px;
+  text-align: center;
+}
+
+.detail-text {
+  font-size: 15px;
+  color: #666;
+}
+
+.edit-btn {
+  padding: 11px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  background-color: #5B5BFF;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #4A4AE8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(91, 91, 255, 0.3);
+}
+
+.delete-btn {
+  padding: 11px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  background-color: #ff4444;
+  color: white;
+  margin-right: auto;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+}

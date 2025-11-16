@@ -1,0 +1,157 @@
+.dashboard-container {
+  padding: 35px 45px;
+  max-width: 1400px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  margin-bottom: 45px;
+}
+
+.metric-card {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.metric-icon {
+  font-size: 40px;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f5ff 0%, #e8e8ff 100%);
+  border-radius: 14px;
+}
+
+.metric-details {
+  flex: 1;
+}
+
+.metric-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 6px 0;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.agenda-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 32px;
+}
+
+.agenda-panel {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.panel-title {
+  font-size: 21px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 22px 0;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.agenda-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.agenda-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.agenda-item:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.event-marker {
+  width: 5px;
+  height: 45px;
+  border-radius: 3px;
+}
+
+.agenda-details {
+  flex: 1;
+}
+
+.agenda-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 6px 0;
+}
+
+.agenda-time {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 25px;
+  }
+
+  .agenda-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .metric-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-icon {
+    font-size: 32px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .section-heading {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,159 @@
+.tasks-container {
+  padding: 35px 45px;
+  max-width: 1200px;
+}
+
+.tasks-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.add-task-btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s;
+  background-color: #5B5BFF;
+  color: white;
+}
+
+.add-task-btn:hover {
+  background-color: #4A4AE8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(91, 91, 255, 0.3);
+}
+
+.task-group {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.group-header {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 22px 0;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.group-header.overdue-status {
+  color: #ff4444;
+}
+
+.group-header.today-status {
+  color: #5B5BFF;
+}
+
+.group-header.upcoming-status {
+  color: #7ED321;
+}
+
+.task-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.task-card:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.task-indicator {
+  width: 7px;
+  height: 55px;
+  border-radius: 4px;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 6px 0;
+}
+
+.task-schedule {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.task-remove-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: #ff4444;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.2s;
+  line-height: 1;
+}
+
+.task-card:hover .task-remove-btn {
+  opacity: 1;
+}
+
+.task-remove-btn:hover {
+  background: #cc0000;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .tasks-container {
+    padding: 25px;
+  }
+
+  .tasks-heading {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .task-group {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 26px;
+  }
+
+  .add-task-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}

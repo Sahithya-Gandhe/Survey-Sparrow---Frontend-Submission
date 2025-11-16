@@ -1,0 +1,87 @@
+.app-sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 100;
+}
+
+.app-sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 45px;
+  color: #333;
+}
+
+.brand-icon {
+  font-size: 26px;
+}
+
+.brand-name {
+  letter-spacing: 0.5px;
+}
+
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #666;
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.menu-button:hover {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.menu-button.active-item {
+  background-color: #E8E8FF;
+  color: #5B5BFF;
+  font-weight: 500;
+}
+
+.menu-icon {
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+}
+
+.menu-label {
+  flex: 1;
+}
+
+@media (max-width: 968px) {
+  .app-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.no-data-message {
+  text-align: center;
+  color: #999;
+  padding: 50px 20px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+  .main-app {
+    position: relative;
+  }
+}

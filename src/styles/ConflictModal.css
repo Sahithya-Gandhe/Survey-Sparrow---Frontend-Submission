@@ -1,0 +1,85 @@
+.conflict-alert-modal {
+  background-color: #ffffff;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 620px;
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+.conflict-content {
+  padding: 28px;
+}
+
+.conflict-description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+
+.conflicts-display {
+  background: #fff5f5;
+  border: 1px solid #ffdddd;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.conflict-entry {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+}
+
+.conflict-entry:not(:last-child) {
+  border-bottom: 1px solid #ffeeee;
+}
+
+.conflict-color-bar {
+  width: 5px;
+  height: 45px;
+  border-radius: 3px;
+}
+
+.conflict-info {
+  flex: 1;
+}
+
+.conflict-title {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.conflict-timing {
+  color: #666;
+  font-size: 13px;
+  margin: 0;
+}
+
+.conflict-prompt {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+.proceed-btn {
+  padding: 11px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  background-color: #ff8800;
+  color: white;
+}
+
+.proceed-btn:hover {
+  background-color: #e67700;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 136, 0, 0.3);
+}
