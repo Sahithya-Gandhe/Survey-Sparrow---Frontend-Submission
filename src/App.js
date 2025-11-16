@@ -20,7 +20,7 @@ function App() {
     return cached ? JSON.parse(cached) : initialData;
   });
   const [currentView, setCurrentView] = useState('calendar');
-  const [sidebarVisible, setSidebarVisible] = useState(true);
+  const [sidebarVisible, setSidebarVisible] = useState(false);
   const [filterQuery, setFilterQuery] = useState('');
   
   // Modal states
@@ -162,13 +162,14 @@ function App() {
         isOpen={sidebarVisible}
         activeSection={currentView}
         onNavigate={setCurrentView}
+        onClose={() => setSidebarVisible(false)}
       />
       
       <main className="content-area">
         <Header 
           onToggleSidebar={() => setSidebarVisible(!sidebarVisible)}
-          searchText={filterQuery}
-          onSearchChange={setFilterQuery}
+          filterQuery={filterQuery}
+          onFilterChange={setFilterQuery}
         />
         
         {currentView === 'dashboard' && (

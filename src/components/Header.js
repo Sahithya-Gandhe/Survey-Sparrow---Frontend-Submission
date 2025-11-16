@@ -1,17 +1,19 @@
 import React from 'react';
 import '../styles/Header.css';
 
-const Header = ({ onToggleSidebar, searchText, onSearchChange }) => {
-  const clearSearch = () => onSearchChange('');
+const Header = ({ filterQuery, onFilterChange, onToggleSidebar }) => {
+  const clearSearch = () => onFilterChange('');
 
   return (
     <header className="app-header">
       <button 
-        className="sidebar-toggle-btn" 
+        className="hamburger-menu" 
         onClick={onToggleSidebar}
         aria-label="Toggle sidebar"
       >
-        ☰
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
       
       <div className="search-container">
@@ -20,10 +22,10 @@ const Header = ({ onToggleSidebar, searchText, onSearchChange }) => {
           type="text"
           className="search-input"
           placeholder="Search events..." 
-          value={searchText}
-          onChange={(e) => onSearchChange(e.target.value)}
+          value={filterQuery}
+          onChange={(e) => onFilterChange(e.target.value)}
         />
-        {searchText && (
+        {filterQuery && (
           <button 
             className="clear-search-btn" 
             onClick={clearSearch}
